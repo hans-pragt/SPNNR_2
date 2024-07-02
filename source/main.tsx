@@ -1,22 +1,23 @@
 // #region Imports
 
 /* React */
-import { StrictMode } from 'react'
-import ReactDOM from 'react-dom/client'
+import { StrictMode } from 'react';
+import ReactDOM from 'react-dom/client';
 
 /* SPNNR */
-import { Application } from './Application.tsx'
+import { Application } from './Application.tsx';
 
 // #endregion Imports
 
 // #region Application Root
 
-ReactDOM
-  .createRoot(document.getElementById('root')!)
-  .render(
+const mountPoint = document.getElementById('root');
+if (mountPoint) {
+  ReactDOM.createRoot(mountPoint).render(
     <StrictMode>
       <Application />
-    </StrictMode>
+    </StrictMode>,
   );
+}
 
-// #endreion Application root
+// #endregion Application root
