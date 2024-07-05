@@ -3,6 +3,9 @@
 /* React */
 import { useState } from 'react';
 
+/* Classnames */
+import classnames from 'classnames';
+
 // #endregion Imports
 
 // #region Component
@@ -16,10 +19,16 @@ export function CaseHeader() {
 
   return (
     <div
-      className={`pb-2 flex flex-row gap-2 border-b-2 ${hasFocus ? 'border-green' : 'border-black'}`}
+      className={classnames(
+        'pb-2 flex flex-row gap-2',
+        'border-b-2',
+        hasFocus ? 'border-green' : 'border-black',
+      )}
     >
       {/* Label */}
-      <span className="border border-black inline-block px-2 text-xl font-bold">
+      <span
+        className={classnames('px-2 border border-black', 'text-xl font-bold')}
+      >
         A
       </span>
 
