@@ -34,7 +34,11 @@ export function CaseHeader() {
 
       {/* Input */}
       <input
-        className="flex-1 outline-none text-xl text-blue-700 tracking-wider font-handwriting"
+        className={classnames(
+          'flex-1',
+          'outline-none',
+          'text-xl text-blue-700 tracking-wider font-[family-name:var(--handwriting-font)]',
+        )}
         type="text"
         onFocus={() => setHasFocus(true)}
         onBlur={() => setHasFocus(false)}
