@@ -1,21 +1,47 @@
 // #region Imports
 
 /* React */
-import { useState } from 'react';
+import { type MouseEvent, useContext, useRef, useState } from 'react';
 
 /* Classnames */
 import classnames from 'classnames';
+
+/* SPNNR */
+import { EntriesContext } from '../context';
 
 // #endregion Imports
 
 // #region Component
 
 export function CaseHeader() {
-  // #region Focus
+  // #region Input Field
 
+  const inputField = useRef<HTMLInputElement | null>(null);
   const [hasFocus, setHasFocus] = useState<boolean>(false);
 
-  // #endregion Focus
+  // #endregion Input Field
+
+  // #region Entries
+
+  const { addEntry } = useContext(EntriesContext);
+
+  function onAddEntry(event: MouseEvent) {
+    event.preventDefault();
+    event.stopPropagation();
+
+    const input = inputField.current;
+    if (!input) {
+      return;
+    }
+
+    const entry = input.value;
+    addEntry(entry);
+
+    input.value = '';
+    input.focus();
+  }
+
+  // #endregion Entries
 
   return (
     <div
@@ -34,6 +60,7 @@ export function CaseHeader() {
 
       {/* Input */}
       <input
+        ref={inputField}
         className={classnames(
           'flex-1',
           'outline-none',
@@ -45,7 +72,9 @@ export function CaseHeader() {
       />
 
       {/* Add Item */}
-      <button type="button">Add</button>
+      <button type="button" onMouseDown={onAddEntry}>
+        +
+      </button>
     </div>
   );
 }

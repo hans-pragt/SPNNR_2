@@ -2,6 +2,7 @@
 
 /* Telestream */
 import { CaseHeader } from './CaseHeader';
+import { CaseTracksList } from './CaseTracksList';
 
 // #endregion Imports
 
@@ -14,7 +15,7 @@ export function CasetteCase() {
       <CaseHeader />
 
       {/* Entries */}
-      <div className="flex-1">Entries</div>
+      <CaseTracksList />
     </div>
   );
 }
