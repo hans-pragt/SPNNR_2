@@ -20,9 +20,9 @@ export function CaseHeader() {
   return (
     <div
       className={classnames(
-        'pb-2 flex flex-row gap-2',
+        'pb-2 flex flex-row gap-4',
         'border-b-2',
-        hasFocus ? 'border-green' : 'border-black',
+        hasFocus ? 'border-orange-700' : 'border-black',
       )}
     >
       {/* Label */}
@@ -34,7 +34,7 @@ export function CaseHeader() {
 
       {/* Input */}
       <input
-        className="flex-1 outline-none"
+        className="flex-1 outline-none text-xl text-blue-700 tracking-wider font-handwriting"
         type="text"
         onFocus={() => setHasFocus(true)}
         onBlur={() => setHasFocus(false)}
