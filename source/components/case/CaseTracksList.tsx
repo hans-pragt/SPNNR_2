@@ -1,7 +1,14 @@
-// #region Component
+// #region Imports
 
+/* React */
 import { useContext } from 'react';
-import { EntriesContext } from '../context';
+
+/* SPNNR */
+import { EntriesContext } from '@/context';
+
+// #endregion Imports
+
+// #region Component
 
 export function CaseTracksList() {
   // #region Entries

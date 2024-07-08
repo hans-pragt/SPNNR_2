@@ -7,7 +7,7 @@ import { type MouseEvent, useContext, useRef, useState } from 'react';
 import classnames from 'classnames';
 
 /* SPNNR */
-import { EntriesContext } from '../context';
+import { EntriesContext } from '@/context';
 
 // #endregion Imports
 

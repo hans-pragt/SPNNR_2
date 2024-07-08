@@ -1,8 +1,8 @@
 // #region Imports
 
 /* Telestream */
-import { CaseHeader } from './CaseHeader';
-import { CaseTracksList } from './CaseTracksList';
+import { CaseHeader } from './case/CaseHeader';
+import { CaseTracksList } from './case/CaseTracksList';
 
 // #endregion Imports
 
