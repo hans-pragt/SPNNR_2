@@ -5,6 +5,7 @@ import { useContext } from 'react';
 
 /* SPNNR */
 import { EntriesContext } from '@/context';
+import { TrackItem } from './TrackItem';
 
 // #endregion Imports
 
@@ -18,10 +19,12 @@ export function CaseTracksList() {
   // #endregion Entries
 
   return (
-    <div>
-      {entries.map((entry) => (
-        <div key={entry}>{entry}</div>
-      ))}
+    <div className="h-full overflow-auto">
+      <div className="min-h-full dashed-background">
+        {entries.map((entry) => (
+          <TrackItem key={entry} />
+        ))}
+      </div>
     </div>
   );
 }

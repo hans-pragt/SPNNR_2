@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom/client';
 
 /* SPNNR */
 import './styles/tailwind.scss';
-import './styles/fonts.scss';
+import './styles/styles.scss';
 import { Application } from './Application.tsx';
 
 // #endregion Imports

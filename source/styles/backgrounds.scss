@@ -1,0 +1,11 @@
+.dashed-background {
+  margin-top: -1px;
+  ///background-image: conic-gradient(at 50% 1px, transparent 75%, red 0turn);
+  --c: #222; /* color */
+  --t: 1px; /* thickness */
+  --d: 10px; /* control the dashes */
+  --g: 30px;  /* distance between vertical lines */
+ 
+  background:
+    conic-gradient(at 50% var(--t),#0000 75%,var(--c) 0) 0 0/var(--d) var(--g);
+}
